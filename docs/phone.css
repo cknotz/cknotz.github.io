@@ -196,7 +196,7 @@ th, td {
 
 @media only screen and (max-width: 400px) {
   .row {
-    height: 650px;
+    height: 450px;
   }
   #header {
     margin-top: 0px;
