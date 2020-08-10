@@ -24,6 +24,10 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 5px;
 }
 
+h1 {
+  font-size: 30px;
+}
+
 h2 {
   margin-bottom: 30px;
   font-size: 18px;
@@ -66,7 +70,7 @@ a:active {
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 60%;
+  width: 55%;
   padding: 10px;
 }
 
@@ -77,21 +81,15 @@ a:active {
   clear: both;
 }
 
-.row:last-child:after {
-  content: ' ';
-  display: block;
-  clear: both;
-}
-
 #header {
   margin-top: 0px;
-  margin-left: 75px;
+  margin-left: 50px;
 }
 
  #vertical-menu {
    width:175px;
    height:160px;
-   margin-left:80px;
+   margin-left:50px;
    margin-right: 500px;
    margin-top: 0px;
    margin.bottom: 50px;
@@ -198,6 +196,23 @@ th, td {
 
 @media only screen and (max-width: 400px) {
   .row {
-    height: 400px;
+    height: 600px;
   }
+  #header {
+    margin-top: 0px;
+    margin-left: 15px;
+  }
+
+   #vertical-menu {
+     width:175px;
+     height:160px;
+     margin-left:15px;
+     margin-right: 500px;
+     margin-top: 0px;
+     margin.bottom: 50px;
+     float: left;
+   }
+   h1 {
+     font-size: 25px;
+   }
 }
