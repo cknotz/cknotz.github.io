@@ -195,19 +195,24 @@ th, td {
 }
 
 @media only screen and (max-width: 400px) {
+
+#anim {
+  display: none;
+}
+
   .row {
-    height: 550px;
+    height: 25px;
   }
   #header {
     margin-top: 0px;
-    margin-left: 15px;
+    margin-left: 0px;
   }
 
    #vertical-menu {
-     width:175px;
+     width:125px;
      height:160px;
-     margin-left:15px;
-     margin-right: 500px;
+     margin-left:0px;
+     margin-right: 0px;
      margin-top: 0px;
      margin.bottom: 50px;
      float: left;
@@ -219,4 +224,5 @@ th, td {
    .btn-group button {
      font-size: 12px;
    }
+
 }
