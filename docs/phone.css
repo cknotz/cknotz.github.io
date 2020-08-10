@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 10px;
+  height: 100%;
+  background-color: #181b22;
+  color: #f2f3f4;
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: Lora, sans-serif;
+  font-weight: lighter;
+  text-align: justify;
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  display: table;
+  background-color: #f2f3f4;
+  color: #181b22;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+h5 {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+section {
+  margin-bottom: 75px;
+}
+
+a {
+  color: gray;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: #DB0400;
+}
+
+a:visited {
+  color: #DB0400;
+}
+
+a:active {
+  font-weight: bold;
+  color: #343434;
+}
+
+.row {
+  height: 600px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 55%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row:last-child:after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+#header {
+  margin-top: 0px;
+  margin-left: 75px;
+}
+
+ #vertical-menu {
+   width:175px;
+   height:160px;
+   margin-left:80px;
+   margin-right: 500px;
+   margin-top: 0px;
+   margin.bottom: 50px;
+   float: left;
+ }
+
+#vertical-menu a {
+  background-color: #181b22; /* Grey background color */
+  color: #f2f3f4; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+  font-weight: bolder;
+}
+
+#vertical-menu a:hover {
+  background-color: #f2f3f4; /* Dark grey background on mouse-over */
+  color: #181b22;
+}
+
+#vertical-menu a.active {
+  background-color: #f2f3f4;
+  color: #181b22;
+}
+
+.content-wrap {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.content {
+  padding: 16px;
+}
+
+.references {
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -2em;
+    list-style-type: none;
+}
+
+.references li{
+    padding-left: 1em;
+    padding-bottom: 1em;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+th, td {
+  padding: 10px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #f2f3f4;
+  color: #181b22;
+  cursor: pointer;
+  padding: 15px;
+}
+
+#myBtn:hover {
+  background-color: #f2f3f4; /* Dark grey background on mouse-over */
+  color: #181b22;
+}
+
+
+.btn-group button {
+  background-color: #f2f3f4; /* Green background */
+  border: 1px solid #f2f3f4; /* Green border */
+  color: #181b22; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  font-size: 15px;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+  background-color: #181b22;
+  border: 1px solid #181b22;
+  color: #f2f3f4;
+}
+
+@media only screen and (max-width: 400px) {
+  .row {
+    height: 700px;
+  }
+}
