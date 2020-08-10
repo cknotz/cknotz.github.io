@@ -196,7 +196,7 @@ th, td {
 
 @media only screen and (max-width: 400px) {
   .row {
-    height: 450px;
+    height: 550px;
   }
   #header {
     margin-top: 0px;
@@ -214,5 +214,9 @@ th, td {
    }
    h1 {
      font-size: 25px;
+   }
+
+   .btn-group button {
+     font-size: 12px;
    }
 }
