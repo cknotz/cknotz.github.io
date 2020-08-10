@@ -198,6 +198,6 @@ th, td {
 
 @media only screen and (max-width: 400px) {
   .row {
-    height: 600px;
+    height: 400px;
   }
 }
