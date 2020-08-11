@@ -10,8 +10,15 @@
  // https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 
 console.log("Hello there!")
-var dataset = [ 5, 10, 13, 43, 23, 25, 22, 18, 15, 13,
-                    11, 34, 15, 16, 18, 45, 16, 18, 23, 25 ];
+// var dataset = [ 5, 10, 13, 43, 23, 25, 22, 18, 15, 13,
+//                     11, 34, 15, 16, 18, 45, 16, 18, 23, 25 ];
+
+var numValues = 20; //Count original length of dataset
+var maxValue = 90 // sets maximum value
+dataset = []; //Initialize empty array
+for (var i = 0; i < numValues; i++) { //Loop numValues times
+var newNumbers = Math.floor(Math.random() * maxValue); //
+dataset.push(newNumbers); //Add new number to array
 
 var win_w = window.innerWidth
 var win_h = window.innerHeight
