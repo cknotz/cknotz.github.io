@@ -214,8 +214,8 @@ th, td {
 
 @media only screen and (min-width: 450px) and (max-width: 680px) {
 
-body {
-  font-size: 11px;
+html, body {
+  font-size: 10px;
 }
   .row {
     height: 10px;
