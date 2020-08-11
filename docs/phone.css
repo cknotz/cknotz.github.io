@@ -225,6 +225,10 @@ section {
 p {
   font-size: 12px;
 }
+
+td, th {
+  font-size: 12px;
+}
   .row {
     height: 10px;
   }
