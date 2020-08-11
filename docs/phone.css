@@ -213,6 +213,10 @@ th, td {
 }
 
 @media only screen and (max-width: 680px) {
+
+body {
+  font-size: 12px;
+}
   .row {
     height: 75px;
   }
