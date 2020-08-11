@@ -212,13 +212,19 @@ th, td {
   color: #f2f3f4;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (min-width: 450px) and (max-width: 680px) {
 
 body {
   font-size: 11px;
 }
   .row {
-    height: 75px;
+    height: 10px;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
   }
 
   #header {
@@ -227,12 +233,12 @@ body {
   }
 
   #vertical-menu {
-    width: 125px;
+    width: 150px;
     height: 160px;
-    margin-left: 100px;
+    margin-left: 80px;
     margin-right: 0px;
-    margin-top: 15px;
-    margin.bottom: 50px;
+    margin-top: 20px;
+    margin.bottom: 0px;
     float: left;
   }
 
@@ -245,7 +251,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 449px) {
   .row {
     height: 75px;
   }
