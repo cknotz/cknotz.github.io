@@ -19,6 +19,8 @@ dataset = []; //Initialize empty array
 for (var i = 0; i < numValues; i++) { //Loop numValues times
 var newNumbers = Math.floor(Math.random() * maxValue); //
 dataset.push(newNumbers); //Add new number to array
+};
+console.log(dataset)
 
 var win_w = window.innerWidth
 var win_h = window.innerHeight
@@ -40,13 +42,13 @@ const svg = d3.select("#anim").append("svg")
 
 // Adding scales
 var xScale = d3.scaleBand()
-.domain(d3.range(dataset.length)) // range(dataset.length) returns sequence of index numbers of dataset
+.domain(d3.range(20)) // range(dataset.length) returns sequence of index numbers of dataset
 .range([0, w]) // 'calculate even bands from 0 to width of SVG'
 .round(true) // <-- Enable rounding
 .paddingInner(0.05);
 
 var yScale = d3.scaleLinear()
-.domain([d3.max(dataset),0])
+.domain([90,0])
 .range([0, h]);
 
 var yAxis = d3.axisLeft()
