@@ -218,6 +218,10 @@ html, body {
   font-size: 12px;
 }
 
+column {
+  font-size: 12px;
+}
+
 section {
   font-size: 12px;
 }
@@ -264,9 +268,28 @@ td, th {
 }
 
 @media only screen and (max-width: 449px) {
+
+  html, body {
+    font-size: 12px;
+  }
+
+  section {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  td, th {
+    font-size: 12px;
+  }
+
   .row {
     height: 75px;
   }
+
+
 
   #header {
     margin-top: 0px;
