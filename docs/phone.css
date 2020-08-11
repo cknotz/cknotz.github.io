@@ -215,7 +215,15 @@ th, td {
 @media only screen and (min-width: 450px) and (max-width: 680px) {
 
 html, body {
-  font-size: 10px;
+  font-size: 12px;
+}
+
+section {
+  font-size: 12px;
+}
+
+p {
+  font-size: 12px;
 }
   .row {
     height: 10px;
