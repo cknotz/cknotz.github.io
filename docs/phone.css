@@ -35,7 +35,7 @@ h2 {
 
 h5 {
   margin-top: 30px;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 section {
@@ -64,13 +64,13 @@ a:active {
 }
 
 .row {
-  height: 600px;
+  height: 75px;
 }
 
 /* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 55%;
+  width: 45%;
   padding: 10px;
 }
 
@@ -81,32 +81,42 @@ a:active {
   clear: both;
 }
 
-#header {
-  margin-top: 0px;
-  margin-left: 50px;
+#anim {
+  display: none;
 }
 
- #vertical-menu {
-   width:175px;
-   height:160px;
-   margin-left:50px;
-   margin-right: 500px;
-   margin-top: 0px;
-   margin.bottom: 50px;
-   float: left;
- }
+#header {
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+#vertical-menu {
+  width: 175px;
+  height: 160px;
+  margin-left: 150px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin.bottom: 10px;
+  float: left;
+}
 
 #vertical-menu a {
-  background-color: #181b22; /* Grey background color */
-  color: #f2f3f4; /* Black text color */
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove underline from links */
+  background-color: #181b22;
+  /* Grey background color */
+  color: #f2f3f4;
+  /* Black text color */
+  display: block;
+  /* Make the links appear below each other */
+  padding: 12px;
+  /* Add some padding */
+  text-decoration: none;
+  /* Remove underline from links */
   font-weight: bolder;
 }
 
 #vertical-menu a:hover {
-  background-color: #f2f3f4; /* Dark grey background on mouse-over */
+  background-color: #f2f3f4;
+  /* Dark grey background on mouse-over */
   color: #181b22;
 }
 
@@ -116,7 +126,7 @@ a:active {
 }
 
 .content-wrap {
-  width: 70%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -125,24 +135,25 @@ a:active {
 }
 
 .references {
-    margin-left: 0;
-    padding-left: 1em;
-    text-indent: -2em;
-    list-style-type: none;
+  margin-left: 0;
+  padding-left: 1em;
+  text-indent: -2em;
+  list-style-type: none;
 }
 
-.references li{
-    padding-left: 1em;
-    padding-bottom: 1em;
+.references li {
+  padding-left: 1em;
+  padding-bottom: 1em;
 }
 
 table {
-  border-collapse: separate;
-  border-spacing: 0px;
+  width: 100%;
 }
 
 th, td {
-  padding: 10px;
+  padding: 5px;
+  vertical-align: top;
+  font-size: 14px;
 }
 
 #myBtn {
@@ -161,23 +172,30 @@ th, td {
 }
 
 #myBtn:hover {
-  background-color: #f2f3f4; /* Dark grey background on mouse-over */
+  background-color: #f2f3f4;
+  /* Dark grey background on mouse-over */
   color: #181b22;
 }
 
-
 .btn-group button {
-  background-color: #f2f3f4; /* Green background */
-  border: 1px solid #f2f3f4; /* Green border */
-  color: #181b22; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
+  background-color: #f2f3f4;
+  /* Green background */
+  border: 1px solid #f2f3f4;
+  /* Green border */
+  color: #181b22;
+  /* White text */
+  padding: 10px 24px;
+  /* Some padding */
+  cursor: pointer;
+  /* Pointer/hand icon */
+  float: left;
+  /* Float the buttons side by side */
   font-size: 15px;
 }
 
 .btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+  border-right: none;
+  /* Prevent double borders */
 }
 
 /* Clear floats (clearfix hack) */
@@ -194,35 +212,60 @@ th, td {
   color: #f2f3f4;
 }
 
-@media only screen and (max-width: 400px) {
-
-#anim {
-  display: none;
-}
-
+@media only screen and (max-width: 680px) {
   .row {
-    height: 25px;
+    height: 75px;
   }
+
   #header {
     margin-top: 0px;
     margin-left: 0px;
   }
 
-   #vertical-menu {
-     width:125px;
-     height:160px;
-     margin-left:0px;
-     margin-right: 0px;
-     margin-top: 0px;
-     margin.bottom: 50px;
-     float: left;
-   }
-   h1 {
-     font-size: 25px;
-   }
+  #vertical-menu {
+    width: 125px;
+    height: 160px;
+    margin-left: 100px;
+    margin-right: 0px;
+    margin-top: 15px;
+    margin.bottom: 50px;
+    float: left;
+  }
 
-   .btn-group button {
-     font-size: 12px;
-   }
+  h1 {
+    font-size: 25px;
+  }
 
+  .btn-group button {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .row {
+    height: 75px;
+  }
+
+  #header {
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  #vertical-menu {
+    width: 125px;
+    height: 160px;
+    margin-left: 40px;
+    margin-right: 0px;
+    margin-top: 18px;
+    margin.bottom: 50px;
+    float: left;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .btn-group button {
+    font-size: 12px;
+  }
 }
