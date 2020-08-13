@@ -191,6 +191,7 @@ th, td {
   float: left;
   /* Float the buttons side by side */
   font-size: 15px;
+  font-weight: 600;
 }
 
 .btn-group button:not(:last-child) {
