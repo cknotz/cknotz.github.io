@@ -134,6 +134,10 @@ table {
   width:100%;
 }
 
+tr {
+  white-space: nowrap;
+}
+
 th, td {
   padding: 10px;
   text-align: left;
