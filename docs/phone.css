@@ -150,6 +150,10 @@ table {
   width: 100%;
 }
 
+tr {
+  white-space: nowrap;
+}
+
 th, td {
   padding: 5px;
   vertical-align: top;
