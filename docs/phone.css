@@ -157,6 +157,7 @@ tr {
 th, td {
   padding: 5px;
   vertical-align: top;
+  text-align: left;
   font-size: 14px;
 }
 
@@ -292,6 +293,7 @@ td, th {
 
   td, th {
     font-size: 12px;
+    text-align: left;
   }
 
   .row {
