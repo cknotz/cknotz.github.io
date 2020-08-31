@@ -286,6 +286,10 @@ td, th {
     font-size: 12px;
   }
 
+  tr {
+    white-space: normal;
+  }
+
   td, th {
     font-size: 12px;
   }
