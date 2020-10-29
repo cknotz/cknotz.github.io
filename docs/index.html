@@ -234,6 +234,9 @@
 			</p>
 			<h5>Side projects</h5>
 			<p>
+				<strong>Forecasting bouldering gym crowdedness</strong>: My bouldering gym in Lausanne (<a target='_' href='http://lecube.ch'>lecube.ch</a>) provides up-to-date information on how crowded it is at the moment on their website. I thought: Why not take it one or two steps further? So I set up a scraper that collects the occupancy data from the lecube.ch website every full and half hour and stores it in the cloud. After two weeks worth of data were collected, I designed a dashboard that retrieves the data, computes some descriptive information and - drumroll - forecasts how busy the gym will likely be over the next hours. For the latter, I use a neural network for time-series data. The dashboard is available <a target='_blank' href='https://cknotz.shinyapps.io/lecube_forecast/'>here</a>, and the code to scrape the data and estimate the forecast is available on my <a target='_blank' href='https://github.com/cknotz/lecube_forecast'>GitHub profile</a>.
+			</p>
+			<p>
 				<strong>Stock market information dashboard</strong>: After reading this interesting <a target='_blank' href='https://medium.com/concoda/how-to-predict-major-market-shifts-99419ae1d23c'
 				>Medium post</a> on how to predict investor sentiment and the article by Preis et al. (<a target='_blank' href='https://doi.org/10.1038/srep01684'>2013</a>) in <i>Nature</i> on the relation between Google searches and stock market movements, I decided to set up a dashboard that features some key
 				indicators of likely future stock market developments. It also features historical stock market data retrieved through the Alpha Vantage API and Yahoo Finance, and a search function for ticker symbols. The dashboard is available at: <a target='_blank' href='https://cknotz.shinyapps.io/smarket_dashboard/'>https://cknotz.shinyapps.io/smarket_dashboard/</a> (DO READ THE DISCLAIMER).
