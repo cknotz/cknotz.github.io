@@ -10,8 +10,22 @@
  // https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 
 console.log("Hello there!")
-var dataset = [ 5, 10, 13, 43, 23, 25, 22, 18, 15, 13,
-                    11, 34, 15, 16, 18, 45, 16, 18, 23, 25 ];
+
+random = function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
+
+
+var dataset = [ random(min=5,max=45), random(min=5,max=45), random(min=5,max=45),
+  random(min=5,max=45), random(min=5,max=45), random(min=5,max=45),
+  random(min=5,max=45), random(min=5,max=45), random(min=5,max=45),
+  random(min=5,max=45), random(min=5,max=45), random(min=5,max=45),
+  random(min=5,max=45), random(min=5,max=45), random(min=5,max=45),
+  random(min=5,max=45), random(min=5,max=45), random(min=5,max=45),
+  random(min=5,max=45), random(min=5,max=45) ];
 
 var win_w = window.innerWidth
 var win_h = window.innerHeight
