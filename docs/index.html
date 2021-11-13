@@ -300,11 +300,10 @@
 			</p>
 			<h5>Side projects</h5>
 			<p>
-				<strong>Forecasting bouldering gym crowdedness</strong>: My old bouldering gym in Lausanne (<a target='_' href='http://lecube.ch'>lecube.ch</a>) used to provide up-to-date information on how crowded it is at the moment on its website. I thought: Why
-				not take it one or two steps further? So I set up a scraper that collects the occupancy data from the lecube.ch website every full and half hour and stores it in the cloud. After two weeks worth of data were collected, I designed a dashboard
-				that retrieves the data, computes some descriptive information and - drumroll - forecasts how busy the gym will likely be over the next hours. For the latter, I use a neural network for time-series data. The dashboard is now defunct but nevertheless still available <a
-					target='_blank' href='https://cknotz.shinyapps.io/lecube_forecast/'>here</a>, and the code to scrape the data and estimate the forecast is available on my <a target='_blank' href='https://github.com/cknotz/lecube_forecast'>GitHub
-					profile</a>.
+				<strong><code>R</code> package 'cjointdatachecks':</strong> Since I've been working quite a bit with data from conjoint survey experiments recently, I wrote some <code>R</code> functions to check these data for potential problems (so called carryover effects and randomization
+				problems). These are now bundled in an <code>R</code> package called 'cjointdatachecks', which can be installed from <a href="https://github.com/cknotz/conjointdatachecks" target="_blank">GitHub</a>. The package includes also a vignette, which illustrates how <thead>
+					the functions can be used and reproduces a result from the Hainmueller et al. (2014, <i>Political Analysis</i>) article. I plan to add further functions, to the extent that time allows, and am happy for any input, feedback, or contributions in the meantime.
+				</thead>
 			</p>
 			<p>
 				<strong>Interactive game theory app</strong>: Teaching abstract matters such as game theory can be difficult, but it becomes much easier and considerably more fun for everyone if students can play games such as the Prisoner's Dilemma or the
