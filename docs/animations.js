@@ -59,14 +59,15 @@ var yScale = d3.scaleLinear()
 
 var yAxis = d3.axisLeft()
 .scale(yScale)
-.tickFormat("");
+.tickFormat("")
+.tickSize(0);
 
 
 // Show the axis that corresponds to this scale
 svg.append("g")
 .attr("id", "y-axis")
 .call(yAxis)
-.attr("color", "#f2f3f4");
+.attr("color", "#181b22"); // y-axis set to background color!
 
 // Creating rectangular elements ('rects'), i.e. bars
 svg.selectAll("rect")
