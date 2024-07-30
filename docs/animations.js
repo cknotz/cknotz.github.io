@@ -9,11 +9,13 @@
  // d3noob (https://bl.ocks.org/d3noob/bf44061b1d443f455b3f857f82721372)
  // https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
  // https://developer.mozilla.org/en-US/docs/Web/JavaScript
- // ChatGPT for (most of) the animated scatter plot
+ // ChatGPT for (most of) the animated scatter & box plots
 
  console.log("Hello there!")
 
-if (Math.random() < .5) {
+var vote = Math.random();
+
+if (vote < .33) {
  
 random = function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -123,7 +125,9 @@ d3.interval(function() {
 loop();
 }, 3000);
 
-}else{
+};
+
+if (vote >=.33 & vote < .66){
 
 console.log("The animation was mostly written by ChatGPT.")
 
@@ -250,6 +254,165 @@ function animateData() {
 setInterval(animateData, 4000);
 
 };
+
+if (vote >= .66) {
+  console.log("ChatGPT wrote most of this!")
+
+// Sample data
+const initialData = [
+  {value: 1, group: 'group1'}, {value: 2, group: 'group1'}, {value: 2, group: 'group1'}, 
+  {value: 3, group: 'group1'}, {value: 4, group: 'group1'}, {value: 4, group: 'group1'}, 
+  {value: 4, group: 'group1'}, {value: 5, group: 'group1'}, {value: 6, group: 'group1'}, 
+  {value: 7, group: 'group1'}, {value: 8, group: 'group1'}, {value: 9, group: 'group1'},
+  {value: 2, group: 'group2'}, {value: 3, group: 'group2'}, {value: 3, group: 'group2'}, 
+  {value: 3, group: 'group2'}, {value: 4, group: 'group2'}, {value: 4, group: 'group2'}, 
+  {value: 5, group: 'group2'}, {value: 6, group: 'group2'}, {value: 7, group: 'group2'}, 
+  {value: 7, group: 'group2'}, {value: 8, group: 'group2'}, {value: 10, group: 'group2'},
+  {value: 3, group: 'group3'}, {value: 4, group: 'group3'}, {value: 5, group: 'group3'}, 
+  {value: 6, group: 'group3'}, {value: 6, group: 'group3'}, {value: 7, group: 'group3'}, 
+  {value: 7, group: 'group3'}, {value: 8, group: 'group3'}, {value: 9, group: 'group3'},
+  {value: 9, group: 'group3'}, {value: 10, group: 'group3'}, {value: 10, group: 'group3'}
+];
+
+// Set the dimensions and margins of the graph
+var win_w = window.innerWidth
+var win_h = window.innerHeight
+const margin = {top: 90, right: 15, bottom: 20, left: 75};
+const width = .2 * win_w// 400 - margin.left - margin.right;
+const height = .33 * win_h// 300 - margin.top - margin.bottom;
+
+// Append the svg object to the body of the page
+//const svg = d3.select("svg")
+const svg = d3.select("#anim").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .attr("fill", "#f2f3f4")
+  .append("g")
+  .attr("transform", `translate(${margin.left},${margin.top})`);
+
+// Create the X axis
+const x = d3.scaleBand()
+  .range([0, width])
+  .domain(["group1", "group2", "group3"])
+  .padding(0.2);
+svg.append("g")
+  .attr("transform", `translate(0,${height})`)
+  .call(d3.axisBottom(x).tickFormat("").tickSize(0))
+  .attr("class","axis");
+
+// Create the Y axis
+const y = d3.scaleLinear()
+  .domain([0, 12])
+  .range([height, 0]);
+svg.append("g")
+  .call(d3.axisLeft(y).tickFormat("").tickSize(0))
+  .attr("class","axis");
+
+// Function to compute summary statistics
+function computeSummaryStatistics(data) {
+  const groups = d3.groups(data, d => d.group);
+  const summary = groups.map(([group, values]) => {
+    const sortedValues = values.map(d => d.value).sort(d3.ascending);
+    const q1 = d3.quantile(sortedValues, 0.25);
+    const median = d3.quantile(sortedValues, 0.5);
+    const q3 = d3.quantile(sortedValues, 0.75);
+    const interQuantileRange = q3 - q1;
+    // using IQR instead of 1.5xIQR or min/max for aesthetic reasons
+    const min = q1 - interQuantileRange; //sortedValues[0]; 
+    const max = q3 + interQuantileRange; // sortedValues[sortedValues.length - 1];
+    return { group, q1, median, q3, interQuantileRange, min, max };
+  });
+  return summary;
+}
+
+// Function to update the boxplot
+function updateBoxplot(data, animate = true) {
+  const summary = computeSummaryStatistics(data);
+
+  // Select the groups
+  const boxes = svg.selectAll(".box")
+    .data(summary, d => d.group);
+
+  // Append the boxes
+  const boxEnter = boxes.enter().append("g")
+    .attr("class", "box")
+    .attr("transform", d => `translate(${x(d.group)},0)`);
+
+  // Append the rectangles for the boxes
+  boxEnter.append("rect")
+    .merge(boxes.select("rect"))
+    .transition()
+    .duration(animate ? 4000 : 0)
+    .ease(d3.easeCubicInOut)
+    .attr("x", x.bandwidth() / 4)
+    .attr("width", x.bandwidth() / 2)
+    .attr("y", d => y(d.q3))
+    .attr("height", d => y(d.q1) - y(d.q3))
+    .attr("stroke", "#f2f3f4")
+    .attr("fill", "#f2f3f4");
+
+  // Append the lines for min
+  boxEnter.append("line")
+    .merge(boxes.select("line.min"))
+    .transition()
+    .duration(animate ? 4000 : 0)
+    .ease(d3.easeCubicInOut)
+    .attr("class", "min")
+    .attr("x1", x.bandwidth() / 2)
+    .attr("x2", x.bandwidth() / 2)
+    .attr("y1", d => y(d.min))
+    .attr("y2", d => y(d.q1))
+    .attr("stroke", "#f2f3f4");
+
+  // Append the lines for max
+  boxEnter.append("line")
+    .merge(boxes.select("line.max"))
+    .transition()
+    .duration(animate ? 4000 : 0)
+    .ease(d3.easeCubicInOut)
+    .attr("class", "max")
+    .attr("x1", x.bandwidth() / 2)
+    .attr("x2", x.bandwidth() / 2)
+    .attr("y1", d => y(d.q3))
+    .attr("y2", d => y(d.max))
+    .attr("stroke", "#f2f3f4");
+
+  // Append the median lines
+  boxEnter.append("line")
+    .merge(boxes.select("line.median"))
+    .transition()
+    .duration(animate ? 4000 : 0)
+    .ease(d3.easeCubicInOut)
+    .attr("class", "median")
+    .attr("x1", x.bandwidth() / 4)
+    .attr("x2", x.bandwidth() / 4 * 3)
+    .attr("y1", d => y(d.median))
+    .attr("y2", d => y(d.median))
+    .attr("stroke", "#181b22");
+
+  // Remove old elements
+  boxes.exit().remove();
+}
+
+// Function to generate random data
+function generateRandomData() {
+  return Array.from({length: 36}, (_, i) => ({
+    value: Math.round(Math.random() * 10 + 1),
+    group: i < 12 ? 'group1' : i < 24 ? 'group2' : 'group3'
+  }));
+}
+
+// Initial plot
+updateBoxplot(initialData, false);
+
+// Update plot every 3 seconds
+setInterval(() => {
+  const newData = generateRandomData();
+  updateBoxplot(newData);
+}, 4000);
+
+
+}
 
 
 //Get the button:
