@@ -87,7 +87,7 @@ a:active {
    margin-right: 5px;
    margin-top: 115px;
    float: left;
-   vertical-align: center;
+   vertical-align: middle;
  }
 
 #vertical-menu a {
@@ -142,6 +142,24 @@ th, td {
   padding: 10px;
   text-align: left;
 }
+
+.axis path,
+        .axis line {
+            fill: none;
+            stroke: #181b22;
+            shape-rendering: crispEdges;
+        }
+
+        .scatter-dot {
+            fill: #f2f3f4;
+        }
+
+        .ols-line {
+            fill: none;
+            stroke: #f2f3f4;
+            stroke-width: 2px;
+            stroke-dasharray: 5, 5; /* Added dashed line style */
+        }
 
 #myBtn {
   display: none;
