@@ -13,6 +13,7 @@
 
  console.log("Hello there!")
 
+ /* 
 var vote = Math.random();
 
 if (vote < .33) {
@@ -128,7 +129,7 @@ loop();
 };
 
 if (vote >=.33 & vote < .66){
-
+*/
 console.log("The animation was mostly written by ChatGPT.")
 
 // Scatter plot dimensions and margins
@@ -253,6 +254,7 @@ function animateData() {
 // Animate the scatter plot every 2 seconds
 setInterval(animateData, 4000);
 
+/*
 };
 
 if (vote >= .66) {
@@ -412,8 +414,8 @@ setInterval(() => {
 }, 4000);
 
 
-}
-
+};
+*/
 
 //Get the button:
 mybutton = document.getElementById("myBtn");
