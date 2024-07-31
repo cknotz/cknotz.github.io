@@ -158,7 +158,7 @@ function generateCorrelatedData(n, slope, intercept, noise) {
 }
 
 // Generate correlated data
-let data = generateCorrelatedData(50, 0.8, 0.1, 0.05);
+let data = generateCorrelatedData(50, 0.1, 0.3, 0.05);
 
 // Set the scales
 let x = d3.scaleLinear()
@@ -183,7 +183,8 @@ const yAxis = svg.append("g")
 // Add the scatter dots
 const dots = svg.selectAll(".dot")
     .data(data)
-    .enter().append("circle")
+    .enter()
+    .append("circle")
     .attr("class", "scatter-dot")
     .attr("cx", d => x(d.x))
     .attr("cy", d => y(d.y))
@@ -231,8 +232,13 @@ function animateData() {
     y.domain(d3.extent(data, d => d.y));
 
     // Update axes
-    xAxis.transition().duration(4000).call(d3.axisBottom(x).tickFormat("").tickSize(0));
-    yAxis.transition().duration(4000).call(d3.axisLeft(y).tickFormat("").tickSize(0));
+    xAxis.transition()
+      .duration(4000)
+      .call(d3.axisBottom(x).tickFormat("").tickSize(0));
+
+    yAxis.transition()
+      .duration(4000)
+      .call(d3.axisLeft(y).tickFormat("").tickSize(0));
 
     // Update dots
     dots.data(data)
