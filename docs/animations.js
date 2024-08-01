@@ -158,7 +158,7 @@ function generateCorrelatedData(n, slope, intercept, noise) {
 }
 
 // Generate correlated data
-let data = generateCorrelatedData(50, 0.1, 0.3, 0.05);
+let data = generateCorrelatedData(50, -0.3, 0.3, 0.05);
 
 // Set the scales
 let x = d3.scaleLinear()
@@ -257,7 +257,7 @@ function animateData() {
         .attr("d", line);
 }
 
-// Animate the scatter plot every 2 seconds
+// Animate the scatter plot every 4 seconds
 setInterval(animateData, 4000);
 
 /*
