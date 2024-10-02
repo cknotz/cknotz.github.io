@@ -251,3 +251,7 @@ th, td {
   float: right;
   margin-left: 5px;
 }
+
+.accordion.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
