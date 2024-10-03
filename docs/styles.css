@@ -241,7 +241,7 @@ th, td {
   font-weight: lighter;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height .75s ease-out;
 }
 
 .accordion:after {
