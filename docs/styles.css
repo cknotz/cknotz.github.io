@@ -20,8 +20,9 @@ h1, h2, h3, h4, h5, h6 {
   display: table;
   background-color: #f2f3f4;
   color: #181b22;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 550;
 }
 
 h2 {
@@ -216,7 +217,7 @@ th, td {
   background-color: #f2f3f4;
   color: #181b22;
   cursor: pointer;
-  padding: 18px;
+  padding: 15px;
   width: 100%;
   text-align: left;
   border: none;
@@ -255,3 +256,34 @@ th, td {
 .accordion.active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
+
+.social-buttons {
+  display: flex;
+  gap: 15px; /* Spacing between buttons */
+}
+
+ .social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #f2f3f4;
+  color: #181b22;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-btn:hover {
+  background-color: #f2f3f4; 
+  color: #181b22;
+  transform: scale(1.2); 
+}
+
+
+.social-btn i {
+  margin: 0;
+} 
+

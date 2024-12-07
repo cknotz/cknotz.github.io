@@ -16,6 +16,8 @@
 </head>
 
 <body>
+	<!-- Add icon library -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<a name="top"></a>
 	<button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
 	<div class="row">
@@ -35,11 +37,18 @@
 			<a href="#background">A brief bio</a>
 			<a href="#confs">Conferences & talks</a>
 			<a href="#oth">Other</a>
-			<a href="#rest">Contact</a>
 		</div>
 	</div>
 	<div class="content-wrap">
-		<section id="latest" style="padding-top:250px;">
+		<section id="social" style="padding-top:250px;">
+		<div class="social-buttons">
+			<a href="mailto:carlo.knotz@uis.no" class="social-btn envelope"><i class="fa-solid fa-envelope"></i></a>
+			<a href="https://github.com/cknotz" target="_blank" class="social-btn github"><i class="fa-brands fa-github"></i></a>
+			<a href="https://bsky.app/profile/carloknotz.bsky.social" target="_blank" class="social-btn bluesky"><img width="60%" fill="#f2f3f4" color="#181b22" src = "assets/bluesky-icon.svg"/></a>
+			<a href="https://www.linkedin.com/in/cknotz" target="_blank" class="social-btn linkedin"><i class="fa-brands fa-linkedin"></i></a>
+		  </div>
+		</section>
+		<section id="latest">
 			<h3>Latest</h3>
 			New publication on people's perceptions of immigrants (and why they are often inaccurate) with Petra Sidler and Didier Ruedin now out in the <i>Journal of Race, Ethnicity, and Politics</i> [<a target="_blank" href="https://doi.org/10.1017/rep.2024.18">open access</a>].
 		</section>
@@ -354,7 +363,7 @@
 					href='https://github.com/IDHEAP-UnitePolsoc/Teaching_apps'>https://github.com/IDHEAP-UnitePolsoc/Teaching_apps</a>.
 			</p> -->
 		</section>
-		<section id="rest">
+<!-- 		<section id="rest">
 			<h3>Contact</h3>
 			<div class="btn-group" style="width:100%">
 				<form>
@@ -367,7 +376,7 @@
 					<button style="width:33.3%" formaction="https://www.linkedin.com/in/cknotz">LinkedIn</button>
 				</form>
 			</div>
-		</section>
+		</section> -->
 	</div>
 	<script>
 		var acc = document.getElementsByClassName("accordion");

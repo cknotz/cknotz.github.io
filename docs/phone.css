@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #181b22;
   padding-left: 5px;
   padding-right: 5px;
+  font-weight: 600;
 }
 
 h1 {
@@ -39,7 +40,7 @@ h5 {
 }
 
 section {
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }
 
 a {
@@ -331,7 +332,7 @@ td, th {
   background-color: #f2f3f4;
   color: #181b22;
   cursor: pointer;
-  padding: 18px;
+  padding: 15px;
   width: 100%;
   text-align: left;
   border: none;
@@ -371,3 +372,32 @@ td, th {
 .accordion.active:after {
   content: "\2796"; /* Unicode character for "minus" sign (-) */
 }
+
+.social-buttons {
+  display: flex;
+  gap: 15px; /* Spacing between buttons */
+}
+
+ .social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: #f2f3f4;
+  color: #181b22;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-btn:hover {
+  background-color: #f2f3f4; 
+  color: #181b22;
+  transform: scale(1.2); 
+}
+
+.social-btn i {
+  margin: 0;
+} 
