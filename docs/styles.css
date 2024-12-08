@@ -175,10 +175,11 @@ th, td {
   color: #181b22;
   cursor: pointer;
   padding: 15px;
+  transition: transform 0.3s ease-out;
 }
 
 #myBtn:hover {
-  background-color: #f2f3f4; /* Dark grey background on mouse-over */
+  background-color: #f2f3f4;
   color: #181b22;
   transform: scale(1.05);
 }
@@ -275,7 +276,7 @@ th, td {
   border-radius: 50%;
   text-decoration: none;
   font-size: 20px;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: transform 0.3s ease-out;
 }
 
 .social-btn:hover {
