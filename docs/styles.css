@@ -180,6 +180,7 @@ th, td {
 #myBtn:hover {
   background-color: #f2f3f4; /* Dark grey background on mouse-over */
   color: #181b22;
+  transform: scale(1.05);
 }
 
 
@@ -231,6 +232,7 @@ th, td {
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
   background-color: #ccc;
+  transform: scale(1.01); 
 }
 
 /* Style the accordion panel. Note: hidden by default */
